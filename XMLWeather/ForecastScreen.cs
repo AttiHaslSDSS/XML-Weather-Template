@@ -19,7 +19,18 @@ namespace XMLWeather
 
         public void displayForecast()
         {
+            date1.Text = $"{Form1.Days[0].date}";
+            date2.Text = $"{Form1.Days[1].date}";
+            date3.Text = $"{Form1.Days[2].date}";
 
+            max1.Text = $"{Form1.Days[0].tempHigh}";
+            min1.Text = $"{Form1.Days[0].tempLow}";
+
+            max2.Text = $"{Form1.Days[1].tempHigh}";
+            min2.Text = $"{Form1.Days[1].tempLow}";
+
+            max3.Text = $"{Form1.Days[2].tempHigh}";
+            min3.Text = $"{Form1.Days[2].tempLow}";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -29,6 +40,11 @@ namespace XMLWeather
 
             CurrentScreen cs = new CurrentScreen();
             f.Controls.Add(cs);
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
